@@ -106,13 +106,13 @@ ul {
 .container-header {
 
     display: flex;
-      border-bottom: 1px solid #ECECEC;
+      
     
 }
 
-.header {
+header {
     background: #FFFFFF;
-
+border-bottom: 1px solid #ECECEC;
 }
 
 .logo {
@@ -143,14 +143,16 @@ ul {
 
 /* site naw */
 
-
+  
 
 .second-current {
     width: 78px;
+    margin-top: 32px;
 }
 
 .first-current {
     width: 49px;
+     margin-top: 32px;
 }
 
 
@@ -196,8 +198,8 @@ ul {
  .site-link .link,
  .site-nav .link {
      display: inline-block;
-     padding-top: 32px;
-     /* padding-bottom: 32px; */
+     
+     /*padding-bottom: 32px; */
 
  }
 
@@ -230,14 +232,15 @@ transition-delay: 0;
 color:var(--accent-color);
 } 
 
-.connection {
+.site-link {
     margin-left: auto;
+   
 }
 
 /* спільне для усіх посилань шапки */
 .site-link,
 .site-nav {
-    font-family: 'Roboto';
+     align-items: center;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
@@ -399,6 +402,27 @@ color:var(--accent-color);
  margin-bottom: 94px;
 }
 
+.works-foto {
+    position: relative;
+}
+
+
+.works-text {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 27px;
+    padding-top: 27px;
+    font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        text-transform: uppercase;
+    
+        color: #FFFFFF;
+        background: rgba(47, 48, 58, 0.8);
+}
+
 
 .works-list {
      display: flex;
@@ -445,7 +469,14 @@ color:var(--accent-color);
 .team-container {
 
    padding-bottom: 94px;
+   
 
+}
+
+
+.co-worker-info {
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .our-team {
@@ -457,7 +488,6 @@ background: #F5F4FA;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.17;
-        margin-top: 30px;
         margin-bottom: 10px;
         text-align: center;
 
@@ -465,7 +495,7 @@ background: #F5F4FA;
 
 .position {
         font-size: 16px;
-        line-height: 1.17px;
+        line-height: 1.17;
         margin-bottom: 16px;
         text-align: center;
 
@@ -504,7 +534,9 @@ background: #F5F4FA;
 .customer-list {
     
     display: flex;
-    margin-bottom: 94px;
+    padding-bottom: 94px;
+    padding-top: 50px;
+
 }
 
 
@@ -573,6 +605,11 @@ background: #F5F4FA;
 
 .soc-item:not(:last-child) {
     margin-right: 10px;
+}   
+
+
+.footer-containers {
+    display: flex;
 }
 
 
@@ -581,7 +618,6 @@ background: #F5F4FA;
     width: 231px;
     padding-bottom: 60px;
     padding-top: 60px;
-    margin-left: 120px;
     margin-right: 70px;
 }
 
@@ -647,7 +683,7 @@ font-size: 14px;
 
 
 .customer-title {
-    margin-top: 94px;
+    padding-top: 94px;
 }
 
 
@@ -678,6 +714,7 @@ font-size: 14px;
 
 
 .exampl-text {
+    position: absolute;
     
     font-size: 18px;
     line-height: 1.56;
@@ -733,6 +770,33 @@ font-size: 14px;
  .one-exampl {
      border: 1px solid #EEEEEE;
      width: 370px;
+    
+     
+ }
+
+
+ .one-exampl:hover .exampl-text {
+    transform: translateY(0);
+ }
+
+ .exampl-wrap {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .exampl-text {
+     top: 0;
+     position: absolute;
+
+     font-size: 18px;
+     line-height: 1.56;
+     width: 370px;
+     height: 100%;
+     background-color: rgba(33, 150, 243, 0.9);
+     color: var(--white-color);
+     overflow: auto;
+    transform: translateY(100%);
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
      
  }
 
@@ -822,7 +886,7 @@ color: var(--white-color);
 .co-worker-soc-list {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px; 
+
 }
 
 .co-worker-soc-item:not(:last-child) {
@@ -831,4 +895,58 @@ color: var(--white-color);
 
 
 /* -------header icins-------- */
+
+/* --------МОДАЛЬНЕ ВІКНО----- */
+
+.backdrop {
+    top: 0;
+    left: 0; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+    position: absolute ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 525px;
+    height: 581px;
+     background-color: var(--white-color);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 2px 1px 0px #00000033;
+    
+        box-shadow: 0px 1px 1px 0px #00000024;
+    
+        box-shadow: 0px 1px 3px 0px #0000001F;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;  
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--white-color);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 
