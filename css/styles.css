@@ -96,6 +96,7 @@ ul {
 .section {
 
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* heder */
@@ -116,8 +117,9 @@ border-bottom: 1px solid #ECECEC;
 }
 
 .logo {
+    display: flex;
     margin-right: 93px;
-    padding-top:24px ;
+    align-items: center;
    
 
     font-family: 'Raleway', sans-serif;
@@ -342,7 +344,8 @@ color:var(--accent-color);
     display: flex;
  }
  
- .section-preferences {
+ .section-preferences { 
+     padding-bottom: 0;
 
  
  }
@@ -398,9 +401,7 @@ color:var(--accent-color);
 
  /* -----------WORKS--------- */
 
-.works {
- margin-bottom: 94px;
-}
+
 
 .works-foto {
     position: relative;
@@ -466,17 +467,12 @@ color:var(--accent-color);
  display: flex;
 }
 
-.team-container {
 
-   padding-bottom: 94px;
-   
-
-}
 
 
 .co-worker-info {
-    margin-bottom: 30px;
-    margin-top: 30px;
+   padding-bottom: 30px;
+   padding-top: 30px;
 }
 
 .our-team {
@@ -694,16 +690,14 @@ font-size: 14px;
  
 /* filter button */
 
-.portfolio-cnt {
-   margin-bottom: 94px;
 
-}
 
 .filter {
     display: flex;
     margin: 0 auto;
     justify-content: center;
     flex-basis: calc((100%-30px)3);
+    padding-bottom: 50px;
 }
 
 .card-set {
@@ -736,7 +730,7 @@ font-size: 14px;
     padding: 6px 22px;
     border: 0;
     border-radius: 4px;
-    margin-bottom: 50px;
+
 
 
     font-weight: 500;
@@ -931,6 +925,9 @@ color: var(--white-color);
 }
 
 .close-button {
+    width: 30px;
+    height: 30px;
+    display: flex;
     position: absolute;
     top: 8px;
     right: 8px;  
@@ -938,7 +935,7 @@ color: var(--white-color);
     border-radius: 50%;
     background-color: var(--white-color);
     justify-content: center;
-    align-items: center;
+        align-items: center;
 
 }
 
@@ -946,6 +943,10 @@ color: var(--white-color);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+}
+
+.close-svg {
+    
 }
 
 
